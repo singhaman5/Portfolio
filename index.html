@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Raj | Portfolio Launch</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;800;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b021a;
+            background-image:
+                radial-gradient(circle at center, transparent 30%, #03000a 100%),
+                radial-gradient(ellipse at center, rgba(3, 0, 10, 0.4) 0%, #03000a 100%),
+                radial-gradient(circle at top left, rgba(74, 0, 224, 0.5) 0%, transparent 50%),
+                radial-gradient(circle at bottom right, rgba(142, 45, 226, 0.5) 0%, transparent 50%),
+                linear-gradient(135deg, #0f0c29, #302b63, #5a0a4c, #8e2de2, #4a00e0);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 400% 400%;
+            background-blend-mode: overlay, normal, normal, normal, normal;
+            animation: bgShift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Top Bar Info */
+        .top-bar {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 50;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #DFB6B2;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #DFB6B2;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .btn-go {
+            background: rgba(253, 252, 240, 0.05);
+            /* Glass base */
+            color: #FDFCF0;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            border: 1px solid rgba(253, 252, 240, 0.2);
+            box-shadow: 0 0 20px rgba(253, 252, 240, 0.05);
+            backdrop-filter: blur(10px);
+            font-family: 'Outfit', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-go::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(253, 252, 240, 0.2), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .btn-go:hover::before {
+            left: 100%;
+        }
+
+        .btn-go:hover {
+            transform: translateY(-2px);
+            background: rgba(253, 252, 240, 0.1);
+            border-color: rgba(253, 252, 240, 0.5);
+            box-shadow: 0 10px 30px rgba(253, 252, 240, 0.15), 0 0 15px rgba(13, 100, 180, 0.4);
+        }
+
+        /* Full page SVG wrapper */
+        .svg-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .svg-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* The Neon Ribbon effect */
+        .ribbon {
+            fill: none;
+            stroke: url(#ribbonGradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 15px rgba(253, 252, 240, 0.6)) drop-shadow(0 0 30px rgba(253, 252, 240, 0.4));
+            stroke-dasharray: 6000;
+            stroke-dashoffset: 6000;
+            animation:
+                drawRibbon 5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+                glowPulse 3s ease-in-out infinite alternate 5s,
+                fadeOutRibbon 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 5.5s;
+        }
+
+        .ribbon-front {
+            fill: none;
+            stroke: url(#ribbonGradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 12px rgba(253, 252, 240, 0.8));
+            /* Lighter shadow for front */
+            stroke-dasharray: 6000;
+            stroke-dashoffset: 6000;
+            animation:
+                drawRibbon 5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+                glowPulseFront 3s ease-in-out infinite alternate 5.1s,
+                fadeOutRibbon 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 5.5s;
+        }
+
+        @keyframes drawRibbon {
+            0% {
+                stroke-dashoffset: 6000;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes glowPulse {
+            0% {
+                filter: drop-shadow(0 0 15px rgba(253, 252, 240, 0.6)) drop-shadow(0 0 30px rgba(253, 252, 240, 0.4));
+            }
+
+            100% {
+                filter: drop-shadow(0 0 30px rgba(253, 252, 240, 1)) drop-shadow(0 0 60px rgba(253, 252, 240, 0.8));
+            }
+        }
+
+        @keyframes glowPulseFront {
+            0% {
+                filter: drop-shadow(0 0 12px rgba(253, 252, 240, 0.8));
+            }
+
+            100% {
+                filter: drop-shadow(0 0 25px rgba(253, 252, 240, 1)) drop-shadow(0 0 45px rgba(253, 252, 240, 0.9));
+            }
+        }
+
+        @keyframes fadeOutRibbon {
+            0% {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            100% {
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+            }
+        }
+
+        /* Entrance animations */
+        .animate-fade {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+            animation: elegantFade 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes elegantFade {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes bgShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Ambient Space Particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 5;
+            background: transparent;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(253, 252, 240, 0.4);
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+                scale: 1.5;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <div class="top-bar">
+        <div></div>
+        <a href="portfolio.html" class="btn-go">
+            Enter Portfolio
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- Ambient Particles -->
+    <div class="particles" id="particlesContainer"></div>
+
+    <!-- Central Interactive Vector Graphic -->
+    <div class="svg-wrapper">
+        <svg class="svg-content" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+
+            <defs>
+                <!-- Central intense light glow -->
+                <radialGradient id="centerLight" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(180, 20, 140, 0.8)" />
+                    <stop offset="30%" stop-color="rgba(90, 10, 100, 0.5)" />
+                    <stop offset="100%" stop-color="rgba(30, 5, 50, 0)" />
+                </radialGradient>
+
+                <!-- Dynamic Ribbon Gradient (Glowish Pearl White) -->
+                <linearGradient id="ribbonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="50%" stop-color="#fdfcf0" />
+                    <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+
+                <!-- This mask determines where the FRONT ribbon shows up -->
+                <!-- Only white areas will render the front ribbon, hiding it behind text elsewhere -->
+                <mask id="frontMask">
+                    <!-- Base: everything is black (hidden) -->
+                    <rect width="1600" height="900" fill="black" />
+                    <!-- Expose the ribbon coming DOWN over 'P', 'o' -->
+                    <circle cx="580" cy="300" r="250" fill="white" />
+                    <!-- Expose the ribbon swooping UP across 'r', 't' -->
+                    <ellipse cx="600" cy="650" rx="300" ry="200" fill="white" />
+                    <!-- Expose the ribbon slicing DOWN across 'l', 'i' -->
+                    <circle cx="1150" cy="450" r="200" fill="white" />
+                    <!-- Expose the final wave exiting right -->
+                    <circle cx="1300" cy="650" r="300" fill="white" />
+                </mask>
+
+                <!-- Path for the "Graphic Design" text -->
+                <path id="curveLabel" d="M 280 500 Q 220 350 400 250" fill="none" />
+            </defs>
+
+            <!-- Group to hold the emitted bubbles -->
+            <g id="bubbleLayer"></g>
+
+            <!-- Big Background Text (Top/Bottom Outlines) -->
+            <text x="800" y="250" font-family="'Outfit', sans-serif" font-weight="900" font-size="320"
+                fill="transparent" stroke="rgba(255,255,255,0.03)" stroke-width="4" text-anchor="middle"
+                letter-spacing="15" class="animate-fade">PORTFOLIO</text>
+            <text x="800" y="920" font-family="'Outfit', sans-serif" font-weight="900" font-size="320"
+                fill="transparent" stroke="rgba(255,255,255,0.03)" stroke-width="4" text-anchor="middle"
+                letter-spacing="15" class="animate-fade">PORTFOLIO</text>
+
+            <!-- Intense Center Light behind main text -->
+            <rect x="0" y="0" width="1600" height="900" fill="url(#centerLight)" class="animate-fade" />
+
+            <!-- The Ribbon (BACK layer, behind the text) -->
+            <!-- The path sweeps elegantly across the center -->
+            <path id="mainRibbonPath" class="ribbon" d="
+                M -50 650 
+                C 150 650, 200 600, 280 400 
+                C 350 150, 450 50,  600 200 
+                C 750 350, 750 650, 500 700 
+                C 250 750, 350 450, 600 400 
+                C 800 350, 850 200, 1000 300 
+                C 1150 400, 1200 150, 1300 100 
+                C 1400 50,  1250 350, 1150 450
+                C 1050 550, 1050 800, 1200 800
+                C 1400 800, 1400 500, 1700 400
+            " />
+
+            <!-- Main White Filled Text -->
+            <text x="800" y="550" font-family="'Outfit', sans-serif" font-weight="900" font-size="360" fill="#FDFCF0"
+                text-anchor="middle" letter-spacing="-10" class="animate-fade">Portfolio</text>
+
+            <!-- Removed Curved Sub-Label -->
+
+            <!-- The Ribbon (FRONT layer, masked so it only renders where it should cross the text) -->
+            <!-- We use the EXACT same super complex path, but precisely masked by our circles! -->
+            <path class="ribbon-front" mask="url(#frontMask)" d="
+                M -50 650 
+                C 150 650, 200 600, 280 400 
+                C 350 150, 450 50,  600 200 
+                C 750 350, 750 650, 500 700 
+                C 250 750, 350 450, 600 400 
+                C 800 350, 850 200, 1000 300 
+                C 1150 400, 1200 150, 1300 100 
+                C 1400 50,  1250 350, 1150 450
+                C 1050 550, 1050 800, 1200 800
+                C 1400 800, 1400 500, 1700 400
+            " />
+
+        </svg>
+    </div>
+
+    <script>
+        // Generate ambient space particles
+        const container = document.getElementById('particlesContainer');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            // Randomize particle properties
+            const size = Math.random() * 3 + 1; // 1px to 4px
+            const posX = Math.random() * 100; // 0vw to 100vw
+            const posY = Math.random() * 100 + 100; // Start below screen (100vh to 200vh)
+            const duration = Math.random() * 15 + 10; // 10s to 25s
+            const delay = Math.random() * 10; // 0s to 10s
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${posX}vw`;
+            particle.style.top = `${posY}vh`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+
+            particle.style.opacity = Math.random() * 0.5 + 0.1;
+            container.appendChild(particle);
+        }
+
+        // --- Ribbon Bubble Trail Logic ---
+        const path = document.getElementById('mainRibbonPath');
+        const bubbleLayer = document.getElementById('bubbleLayer');
+        const pathLength = path.getTotalLength();
+
+        // The ribbon animation takes 5 seconds (5000ms), we want to emit particles along the path
+        const animationDuration = 2000;
+        const bubblesPerSecond = 60;
+        const totalBubbles = (animationDuration / 1000) * bubblesPerSecond;
+        let startTime = null;
+
+        function emitBubbles(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = (timestamp - startTime) / animationDuration;
+
+            if (progress <= 1) {
+                // Determine how far along the path the leading edge is right now
+                // Easing cubic-bezier(0.2, 0.8, 0.2, 1) approximately
+                // Native JS doesn't have built-in bezier bezier bezier evaluating, so we use a simplified ease-out
+                const easeOutQuad = t => t * (2 - t);
+                const currentDistance = pathLength * easeOutQuad(progress);
+
+                // Get the X,Y coordinate of the leading edge
+                const point = path.getPointAtLength(currentDistance);
+
+                // Create 1-2 bubbles per frame at this point
+                for (let i = 0; i < 2; i++) {
+                    createBubble(point.x, point.y);
+                }
+
+                requestAnimationFrame(emitBubbles);
+            }
+        }
+
+        function createBubble(x, y) {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+
+            // Randomize bubble size and precise spawn location slightly off-center
+            const r = Math.random() * 6 + 2;
+            const offsetX = (Math.random() - 0.5) * 40;
+            const offsetY = (Math.random() - 0.5) * 40;
+
+            circle.setAttribute("cx", x + offsetX);
+            circle.setAttribute("cy", y + offsetY);
+            circle.setAttribute("r", r);
+            circle.setAttribute("fill", "#ffffff");
+            circle.setAttribute("opacity", "0.9");
+
+            // Add tiny inline CSS animation to float up and fade
+            const animId = 'bubbleAnim_' + Math.random().toString(36).substr(2, 9);
+            const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+            style.textContent = `
+                @keyframes ${animId} {
+                    0% { transform: translate(0px, 0px) scale(1); opacity: 0.8; }
+                    100% { transform: translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 1) * 150}px) scale(0); opacity: 0; }
+                }
+                .bubble-${animId} {
+                    animation: ${animId} ${Math.random() * 2 + 1}s ease-out forwards;
+                }
+            `;
+            document.head.appendChild(style); // Append style to head for SVG
+            circle.classList.add(`bubble-${animId}`);
+
+            bubbleLayer.appendChild(circle);
+
+            // Cleanup bubble and style after animation
+            setTimeout(() => {
+                circle.remove();
+                style.remove();
+            }, 3000);
+        }
+
+        // Start emitting bubbles slightly after load to match CSS animation start
+        setTimeout(() => {
+            requestAnimationFrame(emitBubbles);
+        }, 100);
+
+    </script>
+</body>
+
+</html>

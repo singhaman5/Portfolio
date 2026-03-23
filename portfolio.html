@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh Raj | Portfolio</title>
+    <meta name="description" content="Portfolio of Utkarsh Raj, a passionate software developer.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+
+    <!-- Professional Lens Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-lens"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#about"
+                style="font-family: 'Outfit', sans-serif; color: var(--primary-color);">UR.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto font-inter">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link btn-connect" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0 d-flex align-items-center">
+                        <button id="themeToggle" class="btn btn-outline-secondary rounded-circle"
+                            style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: none; background: rgba(0,0,0,0.05);"
+                            aria-label="Toggle Theme">
+                            <i class="bi bi-moon-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Me / Hero Section -->
+    <section id="about" class="hero-section d-flex align-items-center">
+        <!-- Animated Background Blobs -->
+        <div class="bg-shapes-container">
+            <div class="shape-blob primary"></div>
+            <div class="shape-blob secondary"></div>
+            <div class="shape-blob accent"></div>
+        </div>
+        <div class="container relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content fade-in-up">
+                    <span class="badge bg-soft-primary text-primary mb-3 p-2 px-3 rounded-pill fw-medium">Computer
+                        Science Student</span>
+                    <h1 class="display-3 fw-bold mb-4 font-outfit">Hi, I'm <span class="text-gradient">Utkarsh
+                            Raj</span></h1>
+                    <p class="lead text-muted mb-4 font-inter">
+                        A passionate and analytical data science student with strong proficiency in Python and C++, focused on extracting meaningful insights from data and building impactful, data-driven solutions. With hands-on experience in machine learning, data analysis, and visualization, I strive to solve real-world problems using data-driven approaches.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="CV.pdf" download="Utkarsh_Raj_CV.pdf"
+                            class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm fw-medium d-flex align-items-center">
+                            <i class="bi bi-download me-2"></i> Download Resume
+                        </a>
+                        <a href="#skills" class="btn btn-outline-secondary btn-lg rounded-pill px-4 fw-medium">Explore
+                            Skills</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center hero-image-container fade-in-up delay-1">
+                    <div class="hero-shape profile-img-wrapper">
+                        <img src="h.png" alt="Utkarsh Raj Portrait" class="profile-img">
+                        <div class="card text-start glass-card float-card">
+                            <div class="card-body py-2 px-3">
+                                <h6 class="fw-bold mb-1"><i class="bi bi-code-slash text-primary me-1"></i> Developer
+                                </h6>
+                                <p class="text-muted small mb-0">C++, Python, Web Dev</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Detailed Section -->
+    <section id="about-me" class="section-padding position-relative overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="position-absolute top-0 end-0 w-100 h-100 pe-none" style="z-index: 0; opacity: 0.4;">
+            <div class="position-absolute rounded-circle"
+                style="top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%); filter: blur(60px);">
+            </div>
+            <div class="position-absolute rounded-circle"
+                style="bottom: -10%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%); filter: blur(80px);">
+            </div>
+        </div>
+
+        <div class="container position-relative z-1">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <h2 class="fw-bold font-outfit">About <span class="text-primary">Me</span></h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-10 fade-in-up">
+                    <div
+                        class="about-content-wrapper position-relative p-4 p-md-5 rounded-4 border border-light bg-glassmorphism shadow-sm">
+                        <div class="text-start border-start border-primary border-3 ps-4 mb-4">
+                            <h4 class="fw-bold text-dark font-outfit" style="line-height: 1.6;">
+                                Building efficient, scalable solutions through analytical thinking and deep technical
+                                expertise.
+                            </h4>
+                        </div>
+
+                        <p class="fs-5 text-muted mb-4 text-start" style="line-height: 1.8;">
+                            I am a dedicated Computer Science undergraduate with a strong foundation in <span
+                                class="fw-bold text-dark">Data Structures, Algorithms</span>, and software development,
+                            with proficiency in <span class="fw-bold text-dark">C++, Python, and Java</span>. My
+                            academic journey has been complemented by hands-on experience in data science, machine
+                            learning, and web technologies, enabling me to design and build efficient, scalable, and
+                            user-focused solutions. I have worked extensively with tools and frameworks such as <span
+                                class="fw-bold text-dark">Pandas, NumPy, Scikit-learn, FastAPI</span>, and data
+                            visualization libraries, allowing me to transform raw data into meaningful insights and
+                            practical applications. My approach combines analytical thinking with creativity, ensuring
+                            both technical accuracy and real-world impact.
+                        </p>
+
+                        <p class="fs-5 text-muted mb-0 text-start" style="line-height: 1.8;">
+                            I have consistently strengthened my problem-solving skills by solving <span
+                                class="fw-bold text-dark">250+ DSA problems</span> on platforms like LeetCode and
+                            GeeksforGeeks, demonstrating persistence, logical reasoning, and algorithmic proficiency.
+                            Additionally, I have participated in hackathons and professional training programs,
+                            achieving a <span class="fw-bold text-dark">Top 20 rank among 2,500+ participants</span> in
+                            a competitive hackathon. My project experience includes developing machine learning-based
+                            prediction systems, AI-powered applications, and interactive dashboards for data-driven
+                            decision-making. I am highly motivated to continue learning, adapt to emerging technologies,
+                            and contribute to innovative solutions in the fields of data science and software
+                            engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <h2 class="fw-bold font-outfit">My <span class="text-primary">Skills</span></h2>
+                <div class="line"></div>
+                <p class="text-muted mt-3">The tools and technologies I use to bring ideas to life.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3 fade-in-up">
+                    <div
+                        class="skill-card text-center p-4 rounded-4 h-100 shadow-sm transition-up border-top border-primary border-4 bg-white">
+                        <div class="skill-icon mb-3 text-primary bg-soft-primary mx-auto">
+                            <i class="bi bi-terminal-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 font-outfit">Languages</h5>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
+                            <div class="skill-badge"><i class="devicon-c-plain"></i> <span>C</span></div>
+                            <div class="skill-badge"><i class="devicon-cplusplus-plain"></i> <span>C++</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-python-plain"></i> <span>Python</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-java-plain"></i> <span>Java</span></div>
+                            <div class="skill-badge"><i class="devicon-html5-plain"></i> <span>HTML</span></div>
+                            <div class="skill-badge"><i class="devicon-css3-plain"></i> <span>CSS</span></div>
+                            <div class="skill-badge"><i class="devicon-javascript-plain"></i> <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in-up delay-1">
+                    <div
+                        class="skill-card text-center p-4 rounded-4 h-100 shadow-sm transition-up border-top border-success border-4 bg-white">
+                        <div class="skill-icon mb-3 text-success bg-soft-success mx-auto">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 font-outfit">Frameworks/Libraries</h5>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
+                            <div class="skill-badge"><i class="devicon-scikitlearn-plain"></i>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-pandas-plain"></i> <span>Pandas &
+                                    NumPy</span></div>
+                            <div class="skill-badge"><i class="devicon-matplotlib-plain"></i> <span>Matplotlib &
+                                    Seaborn</span></div>
+                            <div class="skill-badge"><i class="devicon-bootstrap-plain"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-fastapi-plain"></i> <span>FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in-up delay-2">
+                    <div
+                        class="skill-card text-center p-4 rounded-4 h-100 shadow-sm transition-up border-top border-warning border-4 bg-white">
+                        <div class="skill-icon mb-3 text-warning bg-soft-warning mx-auto">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 font-outfit">Tools/Platforms</h5>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
+                            <div class="skill-badge"><i class="devicon-mysql-plain"></i> <span>MySQL</span>
+                            </div>
+                            <div class="skill-badge"><i class="bi bi-bar-chart-fill"></i> <span>Power
+                                    BI</span></div>
+                            <div class="skill-badge"><i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                <span>MS Excel</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-github-original"></i>
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-jupyter-plain"></i> <span>Jupyter</span>
+                            </div>
+                            <div class="skill-badge"><i class="devicon-vscode-plain"></i> <span>VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in-up delay-3">
+                    <div
+                        class="skill-card text-center p-4 rounded-4 h-100 shadow-sm transition-up border-top border-info border-4 bg-white">
+                        <div class="skill-icon mb-3 text-info bg-soft-info mx-auto">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3 font-outfit">Soft Skills</h5>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center mt-2">
+                            <div class="skill-badge"><i class="bi bi-puzzle-fill"></i>
+                                <span>Problem-Solving</span>
+                            </div>
+                            <div class="skill-badge"><i class="bi bi-people-fill"></i> <span>Team
+                                    Collaboration</span></div>
+                            <div class="skill-badge"><i class="bi bi-person-up"></i>
+                                <span>Leadership</span>
+                            </div>
+                            <div class="skill-badge"><i class="bi bi-lightbulb-fill"></i>
+                                <span>Creativity</span>
+                            </div>
+                            <div class="skill-badge"><i class="bi bi-arrow-repeat"></i>
+                                <span>Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding position-relative">
+        <!-- Animated Background Blobs -->
+        <div class="bg-shapes-container" style="opacity: 0.5;">
+            <div class="shape-blob primary" style="top: 20%; left: -10%;"></div>
+            <div class="shape-blob accent" style="bottom: 10%; right: -5%;"></div>
+        </div>
+        <div class="container position-relative z-1">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <h2 class="fw-bold font-outfit">Featured <span class="text-primary">Projects</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-10 col-xl-8 fade-in-up">
+                    <div
+                        class="project-card rounded-4 overflow-hidden shadow-sm bg-white border border-light transition-up">
+                        <div class="project-img p-0 text-center position-relative overflow-hidden"
+                            style="height: 300px;">
+                            <img src="project1.png" alt="Air Quality Dashboard"
+                                class="img-fluid w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                        </div>
+                        <div class="project-content p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="fw-bold mb-0 font-outfit">Air Quality Analysis and Prediction</h3>
+                                <span class="badge bg-light border text-dark fs-6">Jul '25</span>
+                            </div>
+                            <p class="text-primary fw-medium mb-3">Machine Learning | Python | Data Visualization
+                            </p>
+                            <ul class="text-muted ps-3 mb-4 fs-6">
+                                <li class="mb-2">Analyzed environmental datasets to identify pollution trends and key
+                                    variables
+                                    influencing air quality, forming the basis for AQI forecasting.</li>
+                                <li class="mb-2">Built and optimized machine learning models through feature engineering
+                                    and
+                                    hyperparameter tuning, improving prediction accuracy and performance.</li>
+                                <li class="mb-2">Designed and deployed an interactive dashboard to visualize AQI trends
+                                    and pollutant
+                                    metrics, supporting informed and data-driven decisions.</li>
+                            </ul>
+                            <div class="d-flex gap-2 flex-wrap mb-4">
+                                <span class="badge bg-soft-secondary text-secondary">Python</span>
+                                <span class="badge bg-soft-secondary text-secondary">Pandas & NumPy</span>
+                                <span class="badge bg-soft-secondary text-secondary">Scikit-learn</span>
+                                <span class="badge bg-soft-secondary text-secondary">Matplotlib & Seaborn</span>
+                            </div>
+                            <a href="https://github.com/102utkarshraj/Python-New-Project" target="_blank"
+                                class="btn btn-outline-primary rounded-pill px-4 fw-medium"><i
+                                    class="bi bi-github me-1"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-10 col-xl-8 fade-in-up delay-1 mt-5">
+                    <div
+                        class="project-card rounded-4 overflow-hidden shadow-sm bg-white border border-light transition-up">
+                        <div class="project-img p-0 text-center position-relative overflow-hidden"
+                            style="height: 300px;">
+                            <img src="project2.png" alt="AI Spelling Assistant"
+                                class="img-fluid w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                        </div>
+                        <div class="project-content p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 class="fw-bold mb-0 font-outfit">AI-Powered Spelling & Grammar Assistant</h3>
+                                <span class="badge bg-light border text-dark fs-6">May '25</span>
+                            </div>
+                            <p class="text-success fw-medium mb-3">FastAPI | Gemini API | NLP</p>
+                            <ul class="text-muted ps-3 mb-4 fs-6">
+                                <li class="mb-2">Engineered an AI-powered spelling and grammar correction system using
+                                    Python and
+                                    Google Gemini API to enhance automated writing assistance.</li>
+                                <li class="mb-2">Applied NLP techniques and regex-based preprocessing to detect
+                                    linguistic errors and
+                                    designed an intuitive interface enabling seamless input.</li>
+                                <li class="mb-2">Integrated model outputs with validation logic and deployed a
+                                    functional prototype
+                                    delivering real-time responsive feedback.</li>
+                            </ul>
+                            <div class="d-flex gap-2 flex-wrap mb-4">
+                                <span class="badge bg-soft-secondary text-secondary">Python</span>
+                                <span class="badge bg-soft-secondary text-secondary">Google Gemini API</span>
+                                <span class="badge bg-soft-secondary text-secondary">HTML</span>
+                                <span class="badge bg-soft-secondary text-secondary">CSS</span>
+                            </div>
+                            <a href="https://github.com/102utkarshraj/AI-PROJECT" target="_blank"
+                                class="btn btn-outline-success rounded-pill px-4 fw-medium"><i
+                                    class="bi bi-github me-1"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <i class="bi bi-patch-check-fill text-success fs-1 mb-3 d-inline-block"></i>
+                <h2 class="fw-bold font-outfit">All <span class="text-primary">Certifications</span></h2>
+                <div class="line"></div>
+                <p class="text-muted mt-3">Professional courses and certifications completed to upskill.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center px-2 py-4">
+                <!-- Cert 1 -->
+                <div class="col-md-6 col-xl-4 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="cert-card bg-white border border-light overflow-hidden h-100 d-flex flex-column position-relative">
+                        <a href="https://drive.google.com/file/d/1sWA47qc-0Iw4SAi2rLDrvbbNz2wNzSZC/view?usp=drive_link" target="_blank" class="position-relative w-100 d-block cert-img-container bg-light-alt" style="padding-top: 72%;">
+                            <img src="certificates /12320365_MOOC_8G2Z54JCertificate (1).jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="Cloud Computing Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"><i class="bi bi-eye-fill fs-2 text-white"></i></div>
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 position-relative z-1">
+                            <h5 class="fw-bold mb-1">Cloud Computing</h5>
+                            <p class="text-primary small mb-3 fw-medium">NPTEL Swayam</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-2 py-1">Sept '25</span>
+                                <a href="https://drive.google.com/file/d/1sWA47qc-0Iw4SAi2rLDrvbbNz2wNzSZC/view?usp=drive_link" target="_blank" class="btn-view-cert text-decoration-none fw-medium small">View Certificate <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="col-md-6 col-xl-4 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="cert-card bg-white border border-light overflow-hidden h-100 d-flex flex-column position-relative">
+                        <a href="https://drive.google.com/file/d/1hqLY425FsgS1ZBbhAnLS-D4bMyuwRvT8/view?usp=drive_link" target="_blank" class="position-relative w-100 d-block cert-img-container bg-light-alt" style="padding-top: 72%;">
+                            <img src="certificates /1-c5d8220a-a937-4d64-a4e3-9f570e7d5bec (1).jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="Gen AI Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"><i class="bi bi-eye-fill fs-2 text-white"></i></div>
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 position-relative z-1">
+                            <h5 class="fw-bold mb-1">Master Gen AI (ChatGpt)</h5>
+                            <p class="text-success small mb-3 fw-medium">Infosys Springboard</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-2 py-1">Aug '25</span>
+                                <a href="https://drive.google.com/file/d/1hqLY425FsgS1ZBbhAnLS-D4bMyuwRvT8/view?usp=drive_link" target="_blank" class="btn-view-cert text-decoration-none fw-medium small">View Certificate <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cert 3 -->
+                <div class="col-md-6 col-xl-4 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="cert-card bg-white border border-light overflow-hidden h-100 d-flex flex-column position-relative">
+                        <a href="https://drive.google.com/file/d/15KZ_HV8deZhCXuICLrJpY-0kLhCcNnsU/view?usp=drive_link" target="_blank" class="position-relative w-100 d-block cert-img-container bg-light-alt" style="padding-top: 72%;">
+                            <img src="certificates /Coursera bits and bytes.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="Computer Networking Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"><i class="bi bi-eye-fill fs-2 text-white"></i></div>
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 position-relative z-1">
+                            <h5 class="fw-bold mb-1">Bits & Bytes of Computer Networking</h5>
+                            <p class="text-warning small mb-3 fw-medium">Google | Coursera</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-2 py-1">Sept '24</span>
+                                <a href="https://drive.google.com/file/d/15KZ_HV8deZhCXuICLrJpY-0kLhCcNnsU/view?usp=drive_link" target="_blank" class="btn-view-cert text-decoration-none fw-medium small">View Certificate <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cert 4 -->
+                <div class="col-md-6 col-xl-4 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="cert-card bg-white border border-light overflow-hidden h-100 d-flex flex-column position-relative">
+                        <a href="https://drive.google.com/file/d/1l7s2BGU4dr0QgKEHbDMk9jgLazoHtk5K/view?usp=drive_link" target="_blank" class="position-relative w-100 d-block cert-img-container bg-light-alt" style="padding-top: 72%;">
+                            <img src="certificates /udemy certificate master c language .jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="C Language Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"><i class="bi bi-eye-fill fs-2 text-white"></i></div>
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 position-relative z-1">
+                            <h5 class="fw-bold mb-1">Master C Language</h5>
+                            <p class="text-info small mb-3 fw-medium">Udemy</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-2 py-1">Feb '24</span>
+                                <a href="https://drive.google.com/file/d/1l7s2BGU4dr0QgKEHbDMk9jgLazoHtk5K/view?usp=drive_link" target="_blank" class="btn-view-cert text-decoration-none fw-medium small">View Certificate <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cert 5 FreeCodeCamp -->
+                <div class="col-md-6 col-xl-4 fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="cert-card bg-white border border-light overflow-hidden h-100 d-flex flex-column position-relative">
+                        <a href="https://www.freecodecamp.org/certification/utkarshraj102/responsive-web-design" target="_blank" class="position-relative w-100 d-block cert-img-container bg-light-alt" style="padding-top: 72%;">
+                            <img src="certificates /freecodecamp.org_certification_utkarshraj102_responsive-web-design.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="freeCodeCamp Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"><i class="bi bi-eye-fill fs-2 text-white"></i></div>
+                        </a>
+                        <div class="p-4 d-flex flex-column flex-grow-1 position-relative z-1">
+                            <h5 class="fw-bold mb-1">Responsive Web Design</h5>
+                            <p class="text-secondary small mb-3 fw-medium">freeCodeCamp</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto flex-wrap gap-2">
+                                <span class="badge bg-light text-dark border px-2 py-1">Nov '23</span>
+                                <a href="https://www.freecodecamp.org/certification/utkarshraj102/responsive-web-design" target="_blank" class="btn-view-cert text-decoration-none fw-medium small">View Certificate <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training & Achievements Section -->
+    <section id="training" class="section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <i class="bi bi-briefcase-fill text-primary fs-1 mb-3 d-inline-block"></i>
+                <h2 class="fw-bold font-outfit">Training & <span class="text-primary">Achievements</span></h2>
+                <div class="line"></div>
+                <p class="text-muted mt-3">Professional training, workshops, and competitive events.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9 fade-in-up delay-1">
+                    <div class="experience-card bg-white rounded-4 shadow-sm border border-light mb-5 transition-up position-relative overflow-hidden d-flex flex-column flex-md-row p-0">
+                        
+                        <!-- Left Side: Interactive Certificate Image -->
+                        <a href="https://drive.google.com/file/d/1qYe9aIlfaBx1Kn91A61A-a0RThlQPJfX/view?usp=drive_link" target="_blank" class="col-12 col-md-5 position-relative overflow-hidden bg-light-alt d-block text-decoration-none" style="min-height: 250px;">
+                            <img src="certificates /12320365_JJZSKXCCertificate (1).jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover hover-scale" alt="Cipher School Summer Training Certificate">
+                            <div class="cert-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center flex-column gap-2">
+                                <i class="bi bi-eye-fill fs-2 text-white"></i>
+                                <span class="badge bg-white text-dark shadow-sm px-3 py-2 fw-bold">View Certificate</span>
+                            </div>
+                        </a>
+
+                        <!-- Right Side: Extensive Training Content -->
+                        <div class="col-12 col-md-7 p-4 p-md-5 position-relative z-1 d-flex flex-column justify-content-center">
+                            <!-- Subtle Background Accent -->
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-soft-primary opacity-25" style="z-index: -1;"></div>
+                            
+                            <div class="d-flex justify-content-between mb-3 flex-wrap align-items-center">
+                                <h4 class="fw-bold mb-0">Data Structures & Algorithms – C++, STL & OOP</h4>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+                                <h5 class="text-primary fw-bold mb-0"><i class="bi bi-building me-2"></i>Cipher School</h5>
+                                <span class="badge bg-light text-dark border fs-6 px-3 py-2 shadow-sm">Jun '25 - Jul '25</span>
+                            </div>
+                            
+                            <ul class="text-muted fs-6 ps-3 mb-0">
+                                <li class="mb-2">Completed intensive 8-week DSA training focused on algorithmic thinking, time-space optimization, and high-performance C++ development.</li>
+                                <li class="mb-2">Designed and optimized fundamental data structures while applying core OOP principles using C++ and STL.</li>
+                                <li class="mb-2">Utilized advanced algorithms including recursion, two-pointer method, greedy strategies, backtracking, and dynamic programming.</li>
+                                <li>Developed a fully functional Library Management System using OOP and file handling, demonstrating scalable architecture.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-md-6">
+                            <div
+                                class="achievement-item d-flex flex-column h-100 bg-light-alt p-4 rounded-4 border border-light transition-up">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="achievement-icon text-warning me-3 fs-2"><i
+                                            class="bi bi-star-fill align-middle"></i></div>
+                                    <h5 class="fw-bold mb-0">LPU Hackathon<br>Participant</h5>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Dec '24</span>
+                                </div>
+                                <p class="text-muted mb-0 flex-grow-1">Ranked in the Top 20 out of 2,500+ participants
+                                    for
+                                    building a medical chatbot enabling one-to-one consultation and medicine
+                                    recommendations.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div
+                                class="achievement-item d-flex flex-column h-100 bg-light-alt p-4 rounded-4 border border-light transition-up">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="achievement-icon text-info me-3 fs-2"><i
+                                            class="bi bi-lightning-fill align-middle"></i></div>
+                                    <h5 class="fw-bold mb-0">Git & AI Tools<br>Workshop</h5>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Feb '24</span>
+                                </div>
+                                <p class="text-muted mb-0 flex-grow-1">Gained practical exposure to version control,
+                                    collaborative development workflows, and automation practices through a hands-on
+                                    workshop.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div
+                                class="achievement-item d-flex flex-column h-100 bg-light-alt p-4 rounded-4 border border-light transition-up">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="achievement-icon text-success me-3 fs-2"><i
+                                                class="bi bi-code-slash align-middle"></i></div>
+                                        <h5 class="fw-bold mb-0">Solved 250+ Problems<br><span
+                                                class="text-muted fs-6 fw-normal">LeetCode & GFG</span></h5>
+                                    </div>
+                                    <div class="mb-3">
+                                        <span
+                                            class="badge bg-white text-dark border shadow-sm px-3 py-2">Continuous</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-0 flex-grow-1 mt-2">Solved over 250 Data Structures and
+                                    Algorithms problems on platforms such as LeetCode and GeeksforGeeks, demonstrating
+                                    strong analytical and problem-solving skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-title text-center mb-5 fade-in-up">
+                <i class="bi bi-mortarboard-fill text-primary fs-1 mb-3 d-inline-block"></i>
+                <h2 class="fw-bold font-outfit">My <span class="text-primary">Education</span></h2>
+                <div class="line"></div>
+                <p class="text-muted mt-3 max-w-700 mx-auto">My academic journey and the foundational steps that shaped
+                    my technical skills.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="timeline mt-4">
+                        <div class="timeline-item fade-in-down">
+                            <div class="icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="content-box edu-card p-4 p-md-5">
+                                <span class="badge edu-badge float-md-end mb-3 mb-md-0 d-inline-block">Aug '23
+                                    - Present</span>
+                                <h3 class="fw-bold mb-3 edu-title">Bachelor of Technology</h3>
+                                <h5 class="edu-subtitle mb-3">Lovely Professional University | Phagwara, Punjab</h5>
+                                <p class="text-muted fs-5 mb-0">Computer Science and Engineering | CGPA:
+                                    <strong class="edu-highlight">6.54</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in-down delay-1">
+                            <div class="icon-box"><i class="bi bi-book-half"></i></div>
+                            <div class="content-box edu-card p-4 p-md-5">
+                                <span class="badge edu-badge float-md-end mb-3 mb-md-0 d-inline-block">Mar '21
+                                    - May '23</span>
+                                <h3 class="fw-bold mb-3 edu-title">Intermediate (PCM)</h3>
+                                <h5 class="edu-subtitle mb-3">D.A.V Public School Rajrappa Project | Ramgarh, Jharkhand
+                                </h5>
+                                <p class="text-muted fs-5 mb-0">Percentage: <strong class="edu-highlight">80%</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in-down delay-2">
+                            <div class="icon-box"><i class="bi bi-book"></i></div>
+                            <div class="content-box edu-card p-4 p-md-5">
+                                <span class="badge edu-badge float-md-end mb-3 mb-md-0 d-inline-block">Mar '20
+                                    - May '21</span>
+                                <h3 class="fw-bold mb-3 edu-title">Matriculation</h3>
+                                <h5 class="edu-subtitle mb-3">D.A.V Public School Rajrappa Project | Ramgarh, Jharkhand
+                                </h5>
+                                <p class="text-muted fs-5 mb-0">Percentage: <strong class="edu-highlight">89%</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="custom-contact-section section-padding text-white position-relative overflow-hidden">
+        <!-- Advanced Animated Background Particles for Contact -->
+        <div class="contact-bg-particles">
+            <div class="cp-blob cp-1"></div>
+            <div class="cp-blob cp-2"></div>
+            <div class="cp-blob cp-3"></div>
+        </div>
+        <div class="container position-relative z-1 pt-4">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="fw-bold font-outfit mb-3 ultimate-title" style="font-size: 3.5rem;">Get <span
+                        class="text-gradient-contact glow-text">In</span> Touch</h2>
+                <div class="contact-line mb-3 mx-auto"></div>
+                <p class="text-contact-muted max-w-700 mx-auto font-inter fs-5">
+                    Have a question or want to work together? Fill out the form below or reach out directly through my
+                    contact information. Let's create something extraordinary.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Contact Form Column -->
+                <div class="col-lg-6 col-xl-5">
+                    <div class="contact-card p-4 p-md-5 h-100">
+                        <form>
+                            <div class="mb-4 form-floating-custom">
+                                <input type="text" class="form-control contact-input" id="name" placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                            <div class="mb-4 form-floating-custom">
+                                <input type="email" class="form-control contact-input" id="email" placeholder=" ">
+                                <label for="email">Email Address</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                            <div class="mb-5 form-floating-custom">
+                                <textarea class="form-control contact-input" id="message" rows="4"
+                                    placeholder=" "></textarea>
+                                <label for="message">Your Message...</label>
+                                <div class="input-focus-line"></div>
+                            </div>
+                            <button type="button" class="btn btn-contact-submit w-100 fw-bold py-3 text-white">
+                                <span>Send Message</span>
+                                <i class="bi bi-send ms-2 btn-icon"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info Column -->
+                <div class="col-lg-6 col-xl-4 offset-xl-1 mt-4 mt-lg-0">
+                    <div class="contact-card p-4 p-md-5 h-100 d-flex flex-column justify-content-center">
+                        <h4 class="fw-bold text-white mb-5">Contact Information</h4>
+
+                        <div class="d-flex flex-column gap-4 gap-md-5">
+                            <div class="d-flex align-items-center contact-info-row">
+                                <div class="contact-icon-box magnetic me-4"
+                                    style="width: 55px; height: 55px; font-size: 1.5rem;">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <p class="text-contact-muted small mb-1 text-uppercase tracking-wide">Email</p>
+                                    <a href="mailto:102utkarshraj@gmail.com"
+                                        class="text-light text-decoration-none fw-medium contact-link-hover text-break fs-5">102utkarshraj@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center contact-info-row">
+                                <div class="contact-icon-box magnetic me-4"
+                                    style="width: 55px; height: 55px; font-size: 1.5rem;">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <p class="text-contact-muted small mb-1 text-uppercase tracking-wide">Phone</p>
+                                    <a href="tel:+919608630755"
+                                        class="text-light text-decoration-none fw-medium contact-link-hover fs-5">+91-9608630755</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center contact-info-row">
+                                <div class="contact-icon-box magnetic me-4"
+                                    style="width: 55px; height: 55px; font-size: 1.5rem;">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <p class="text-contact-muted small mb-1 text-uppercase tracking-wide">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/utkarsh-raj-558701245/" target="_blank"
+                                        class="text-light text-decoration-none fw-medium contact-link-hover text-break fs-5">linkedin.com/in/utkarsh-raj</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center contact-info-row">
+                                <div class="contact-icon-box magnetic me-4"
+                                    style="width: 55px; height: 55px; font-size: 1.5rem;">
+                                    <i class="bi bi-github"></i>
+                                </div>
+                                <div class="contact-text-box">
+                                    <p class="text-contact-muted small mb-1 text-uppercase tracking-wide">GitHub</p>
+                                    <a href="https://github.com/102utkarshraj" target="_blank"
+                                        class="text-light text-decoration-none fw-medium contact-link-hover text-break fs-5">github.com/utkarsh-raj</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Banner -->
+                <div class="col-lg-12 col-xl-10 mt-5">
+                    <div class="contact-footer-banner text-center p-4">
+                        <p class="mb-0 text-white fw-medium">Let’s turn ideas into reality and build something
+                            exceptional together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
